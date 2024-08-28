@@ -1,90 +1,100 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2761
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="en">\
-<head>\
-    <meta charset="UTF-8">\
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-    <title>CPM Calculator</title>\
-    <style>\
-        body \{\
-            font-family: Arial, sans-serif;\
-            margin: 0;\
-            padding: 0;\
-            display: flex;\
-            justify-content: center;\
-            align-items: center;\
-            height: 100vh;\
-            background-color: #f0f0f0;\
-        \}\
-        .calculator \{\
-            background-color: #fff;\
-            padding: 20px;\
-            border-radius: 8px;\
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\
-            width: 300px;\
-        \}\
-        .calculator input \{\
-            width: 100%;\
-            padding: 10px;\
-            margin-bottom: 10px;\
-            border-radius: 4px;\
-            border: 1px solid #ccc;\
-        \}\
-        .calculator button \{\
-            width: 100%;\
-            padding: 10px;\
-            background-color: #28a745;\
-            color: white;\
-            border: none;\
-            border-radius: 4px;\
-            cursor: pointer;\
-        \}\
-        .calculator button:hover \{\
-            background-color: #218838;\
-        \}\
-        .result \{\
-            margin-top: 20px;\
-            font-weight: bold;\
-        \}\
-    </style>\
-</head>\
-<body>\
-\
-<div class="calculator">\
-    <h2>CPM Calculator</h2>\
-    <input type="number" id="cpm" placeholder="Enter CPM ($)" />\
-    <input type="number" id="ads" placeholder="Enter Number of Ads" />\
-    <input type="number" id="listeners" placeholder="Enter Monthly Listeners" />\
-    <button onclick="calculateRevenue()">Calculate Revenue</button>\
-    <div class="result" id="result"></div>\
-</div>\
-\
-<script>\
-    function calculateRevenue() \{\
-        const cpm = document.getElementById('cpm').value;\
-        const ads = document.getElementById('ads').value;\
-        const listeners = document.getElementById('listeners').value;\
-\
-        if (cpm && ads && listeners) \{\
-            const monthlyRevenue = (listeners / 1000) * cpm * ads;\
-            const annualRevenue = monthlyRevenue * 12;\
-\
-            document.getElementById('result').innerHTML = `\
-                Monthly Revenue: $$\{monthlyRevenue.toLocaleString(undefined, \{minimumFractionDigits: 2, maximumFractionDigits: 2\})\}<br>\
-                Annual Revenue: $$\{annualRevenue.toLocaleString(undefined, \{minimumFractionDigits: 2, maximumFractionDigits: 2\})\}\
-            `;\
-        \} else \{\
-            document.getElementById('result').innerHTML = 'Please fill in all fields.';\
-        \}\
-    \}\
-</script>\
-\
-</body>\
-</html>\
-}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;CPM Calculator&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 100vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #f0f0f0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.calculator {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 300px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.calculator input {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid #ccc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.calculator button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #28a745;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.calculator button:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #218838;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.result {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="calculator"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;CPM Calculator&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;input type="number" id="cpm" placeholder="Enter CPM ($)" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;input type="number" id="ads" placeholder="Enter Number of Ads" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;input type="number" id="listeners" placeholder="Enter Monthly Listeners" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="calculateRevenue()"&gt;Calculate Revenue&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="result" id="result"&gt;&lt;/div&gt; &lt;!-- This is where the result will be shown --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function calculateRevenue() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const cpm = document.getElementById('cpm').value;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const ads = document.getElementById('ads').value;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const listeners = document.getElementById('listeners').value;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (cpm &amp;&amp; ads &amp;&amp; listeners) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const monthlyRevenue = (listeners / 1000) * cpm * ads;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const annualRevenue = monthlyRevenue * 12;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Display the results in the "result" div</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('result').innerHTML = `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>Monthly Revenue: $${monthlyRevenue.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>Annual Revenue: $${annualRevenue.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('result').innerHTML = 'Please fill in all fields.';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
